@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools"] 
+build-backend = "setuptools.build_meta" 
+
+
+[project]
+name = "polyscan" 
+version = "0.0.1" 
+
+description = "A tool for scanning and analyzing polynomial functions"
+
+readme = "README.md"
+
+requires-python = ">=3.10"
+
+license = { file = "LICENSE.txt" }
+
+keywords = ["polynomial", "analysis", "scan"]
+
+authors = [{ name = "Roy", email = "author@example.com" }]
+
+[project.optional-dependencies]
+dev = ["check-manifest"]
+test = ["coverage"]
