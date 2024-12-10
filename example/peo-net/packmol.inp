@@ -1,0 +1,14 @@
+tolerance 2.0
+filetype pdb
+output _optimized.pdb
+seed 4108
+structure /tmp/tmpqkiwvtws.pdb
+  connect no
+  number 30
+  inside cube 0 0 0 80
+end structure
+structure /tmp/tmp2h9pib3g.pdb
+  connect no
+  number 250
+  inside cube 0 0 0 80
+end structure

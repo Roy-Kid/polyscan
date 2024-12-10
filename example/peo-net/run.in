@@ -1,0 +1,42 @@
+# eq: init
+units real
+atom_style full
+
+dimension 3
+boundary p p p
+
+read_data system.data
+include system.ff
+
+minimize 1e-4 1e-4 1000 1000
+
+velocity all create 300 7677
+
+timestep 1.0
+
+fix 2 all npt temp 300.0 300.0 100.0 iso 1.0 1.0 1000.0
+run 1000
+
+unfix 2
+
+molecule mol1 pre_stp1.mol
+molecule mol2 post_stp1.mol
+
+fix rxn all bond/react stabilization yes stab .03 &
+    react stp1 all 1 0 3.0 mol1 mol2 stp1.map
+
+fix stab stab_REACT npt temp 300 300 100 iso 1.0 1.0 1000
+
+
+compute 1 all property/local batom1 batom2
+
+compute cluschunk all chunk/atom molecule
+fix prt0 all ave/chunk 1 1 100 cluschunk mass file mass.txt
+
+thermo 100
+thermo_style custom step temp press density f_rxn[*]
+
+dump 1 all local 100 topo.dump c_1[1] c_1[2]
+dump 2 all custom 100 traj.dump id mol type xu yu zu
+
+run 100000

@@ -1,0 +1,52 @@
+# atom_style full
+bond_style harmonic 
+bond_coeff ho-oh 371.4 0.973
+bond_coeff c3-h1 330.6 1.0969
+bond_coeff c3-oh 316.7 1.4233
+bond_coeff c3-c3 300.9 1.5375
+bond_coeff c3-os 308.6 1.4316
+bond_coeff c3-hc 330.6 1.0969
+
+angle_style harmonic 
+angle_coeff h1-c3-oh 50.9 110.260047369346
+angle_coeff c3-oh-ho 47.4 107.26004608361897
+angle_coeff c3-c3-h1 46.4 109.56004706934303
+angle_coeff h1-c3-h1 39.2 108.46004659790978
+angle_coeff h1-c3-os 50.8 109.780046819855
+angle_coeff c3-c3-oh 67.5 110.19004739664149
+angle_coeff c3-c3-os 68.0 107.97004621602035
+angle_coeff c3-os-c3 62.7 112.48004797700933
+angle_coeff c3-c3-hc 46.3 109.80004705760963
+angle_coeff hc-c3-hc 39.4 107.5800458769885
+angle_coeff c3-c3-c3 62.9 111.51004761858671
+
+dihedral_style charmmfsw 
+dihedral_coeff oh-c3-c3-h1 0.25 1 0 0.5
+dihedral_coeff c3-c3-oh-ho 0.25 1 0 0.5
+dihedral_coeff h1-c3-oh-ho 0.166666667 3 0 0.5
+dihedral_coeff h1-c3-os-c3 0.383333333 3 0 0.5
+dihedral_coeff h1-c3-c3-os 0.25 1 0 0.5
+dihedral_coeff h1-c3-c3-h1 0.155555556 3 0 0.5
+dihedral_coeff os-c3-c3-h1 0.25 1 0 0.5
+dihedral_coeff h1-c3-c3-oh 0.25 1 0 0.5
+dihedral_coeff oh-c3-c3-os 1.175 2 0 0.5
+dihedral_coeff c3-c3-os-c3 0.1 2 3 0.5
+dihedral_coeff os-c3-c3-oh 1.175 2 0 0.5
+dihedral_coeff c3-c3-c3-h1 0.155555556 3 0 0.5
+dihedral_coeff c3-c3-c3-hc 0.16 3 0 0.5
+dihedral_coeff hc-c3-c3-c3 0.16 3 0 0.5
+dihedral_coeff hc-c3-c3-hc 0.15 3 0 0.5
+dihedral_coeff hc-c3-c3-os 0.25 1 0 0.5
+dihedral_coeff hc-c3-c3-h1 0.155555556 3 0 0.5
+dihedral_coeff c3-c3-c3-os 0.155555556 3 0 0.5
+dihedral_coeff c3-c3-c3-c3 0.2 1 3 0.5
+
+pair_style lj/charmmfsw/coul/charmmfsh 2.5 9.0
+pair_coeff oh oh 0.210 3.066
+pair_coeff c3 c3 0.109 3.400
+pair_coeff ho ho 0.000 0.891
+pair_coeff h1 h1 0.016 2.471
+pair_coeff os os 0.170 3.000
+pair_coeff hc hc 0.016 2.650
+
+
