@@ -63,8 +63,4 @@ fix fprint all print 1000 "${elapsed} ${tk} ${pr} ${vl} ${dn} ${et} ${ep} ${ek}"
             elif step["type"] == "nvt":
                 f.write(f"fix 1 all nvt temp {step['Tstart']} {step['Tend']} 100.0\n")
                 f.write(f"run {int(step['steps'])}\n")
-<<<<<<< HEAD
                 f.write(f"write_data T{step['Tend']}K.data nocoeff\n")
-=======
-                f.write(f"write_data T{step['T']}K.data nocoeff\n")
->>>>>>> c2ebdc28cdef6bbe1497bbdea776f4dbdb3302ed
