@@ -55,6 +55,5 @@ def polymerize_reduce(polymerize_one: Collect[Path]) -> dict:
 
 
 def pack(polymerize_reduce: dict, pack_config: dict, proj_dir: Path) -> list:
-    from .pack import pack
-
-    return pack(polymerize_reduce, pack_config, proj_dir)
+    from .pack import pack2
+    return pack2(polymerize_reduce, pack_config, proj_dir)

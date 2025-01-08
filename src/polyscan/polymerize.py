@@ -47,7 +47,7 @@ def polymerize(typify_dir:dict, polymerize_config: dict, proj_dir:Path, backend:
 
     tleap_script.append("quit")
 
-    this_dir = proj_dir / '.db' / name
+    this_dir = proj_dir / 'units' / name
     this_dir.mkdir(parents=True, exist_ok=True)
     
     with open(this_dir /"tleap.in", "w") as f:
