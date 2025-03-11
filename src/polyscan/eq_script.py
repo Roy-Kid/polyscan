@@ -19,10 +19,10 @@ dihedral_style hybrid charmm multi/harmonic
 special_bonds lj 0.0 0.0 0.5 coul 0.0 0.0 0.83333333
 pair_style lj/cut/coul/long 2.5 9.0
 pair_modify tail yes
-kspace_style pppm 1e-5
 
 read_data system.data
 include system.ff
+kspace_style pppm 1e-5
 
 timestep 1.0
 
@@ -41,6 +41,10 @@ variable epair equal "epair"
 variable eb equal "ebond"
 variable eang equal "eangle"
 variable edih equal "edihed"
+
+group litfsi molecule > 20
+variable newcharge atom q*0.75
+set group litfsi charge v_newcharge
 
 thermo 10000
 thermo_style custom elapsed temp press vol density etotal
@@ -91,10 +95,10 @@ dihedral_style hybrid charmm multi/harmonic
 special_bonds lj 0.0 0.0 0.5 coul 0.0 0.0 0.83333333
 pair_style lj/cut/coul/long 2.5 9.0
 pair_modify tail yes
-kspace_style pppm 1e-5
 
 read_data system.data
 include system.ff
+kspace_style pppm 1e-4
 
 timestep 1.0
 

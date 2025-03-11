@@ -21,7 +21,7 @@ kspace_style pppm 1e-6
 
 read_data ../${T}K.data
 change_box all triclinic
-include system.ff
+include ../system.ff
 kspace_style pppm 1.0e-5
 
 velocity all create ${T} ${rndint}

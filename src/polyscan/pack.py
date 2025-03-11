@@ -47,18 +47,6 @@ def pack2(data: dict, pack_config: dict, proj_dir: Path, n_trial: int|None = Non
         app.add_target(
             system.frame, struct["number"], region=box
         )
-            # if numerical_type:
-            #     for atomtype in system.forcefield.atomtypes:
-            #         atomtype.name = str(int(atomtype.name) + ff.n_atomtypes)
-            #     for bondtype in system.forcefield.bondtypes:
-            #         bondtype.name = str(int(bondtype.name) + ff.n_bondtypes)
-            #     for angletype in system.forcefield.angletypes:
-            #         angletype.name = str(int(angletype.name) + ff.n_angletypes)
-            #     for dihedraltypes in system.forcefield.dihedraltypes:
-            #         dihedraltypes.name = str(int(dihedraltypes.name) + ff.n_dihedraltypes)
-            #     for pairtype in system.forcefield.pairtypes:
-            #         pairtype.name = str(int(pairtype.name) + ff.n_pairtypes)
-
         ff.merge_(system.forcefield, offset_type = True)
 
         
